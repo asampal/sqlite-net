@@ -164,7 +164,7 @@ retrieval methods - `ToListAsync`, `FirstAsync`, or `FirstOrDefaultAsync` - is c
 
 ```csharp
 var conn = new SQLiteAsyncConnection(databasePath);
-var query = await conn.Table<Stock>().Where(v => v.Symbol.StartsWith("A"));
+var query = conn.Table<Stock>().Where(v => v.Symbol.StartsWith("A"));
 
 var result = await query.ToListAsync();
 
